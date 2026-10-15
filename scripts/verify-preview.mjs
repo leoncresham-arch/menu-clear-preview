@@ -36,7 +36,7 @@ if (!privateEntry){
 // Keep the premium system maintainable: avoid reverting to 40KB+ of duplicated overrides.
 assert(css.length < 34000, 'Canonical CSS exceeds design-system complexity budget; refactor instead of stacking overrides.');
 assert((css.match(/@import/g)??[]).length === 0, 'Use bundled local font assets instead of runtime @import requests.');
-assert(entry.includes("@fontsource/instrument-serif/400.css") && entry.includes("@fontsource/plus-jakarta-sans/400.css"), 'Real self-hosted typography imports missing.');
+assert(entry.includes("@fontsource/instrument-serif/latin-400.css") && entry.includes("@fontsource/plus-jakarta-sans/latin-400.css"), 'Real self-hosted typography imports missing.');
 assert(css.includes('--shadow-md') && css.includes('--stroke'), 'Shared elevation and border design tokens are required.');
 assert(css.includes('grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)'), 'Hero must use bounded CSS grid columns.');
 assert(!css.includes('.welcomePanel::before') && !css.includes('.welcomePanel::after'), 'Do not reintroduce overlapping CSS hero images.');

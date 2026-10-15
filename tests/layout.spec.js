@@ -12,6 +12,14 @@ for (const viewport of [
     await expect(page.locator('.welcomePanel')).toBeVisible();
     await expect(page.locator('.welcomePanelCopy h2')).toBeVisible();
     await expect(page.locator('.welcomePanelMedia')).toBeVisible();
+    // Fontsource assets must finish loading before checking the real typographic geometry.
+    await page.evaluate(()=>document.fonts.ready);
+    const fontsReady=await page.evaluate(()=>({
+      display:document.fonts.check('400 48px "Instrument Serif"'),
+      body:document.fonts.check('400 14px "Plus Jakarta Sans"'),
+    }));
+    expect(fontsReady.display,'The display typeface must load from bundled assets').toBe(true);
+    expect(fontsReady.body,'The functional typeface must load from bundled assets').toBe(true);
 
     const geometry=await page.evaluate(()=>{
       const hero=document.querySelector('.welcomePanel');

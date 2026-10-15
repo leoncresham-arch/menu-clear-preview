@@ -36,3 +36,44 @@
 @media(max-width:950px){.featureRow{grid-template-columns:1fr 1fr}.welcomePanel{min-height:350px}.dinerHeader{min-height:420px}}
 @media(max-width:760px){.brandName{font-size:27px}.welcomePanel{min-height:360px;padding:36px 28px;background-position:58% center}.welcomePanel h2{font-size:39px}.editorialDivider span:last-child,.dinerEditorial span:last-child{display:none}.featureRow{grid-template-columns:1fr}.featureImage{height:220px;min-height:0}.featureCopy{padding:28px}.statCard{min-height:157px;padding:18px}.dinerHeader{min-height:410px;padding:48px 26px;background-position:63% center}.dinerTop h1{font-size:48px}.dinerContent{padding:0 3px}.foodImage{height:265px}.filterBar{padding:12px}.dishGrid{gap:21px}}
 @media(max-width:420px){.welcomePanel h2{font-size:35px}.welcomePanel{padding:29px 23px}.dinerTop h1{font-size:43px}.featureCopy h2{font-size:33px}.statNumber{font-size:34px}}
+
+/* Premium release pass — restaurant section templates, accessible navigation and controls. Static only. */
+:root{--mc-cream:#fff8ee;--mc-ivory:#fffdf9;--mc-peach:#ffe4ca;--mc-apricot:#ffa468;--mc-orange:#f56b2a;--mc-action:#b74616;--mc-action-dark:#963b14;--mc-ink:#2d251f;--mc-border:#ead2bd;--mc-shadow:0 18px 42px rgba(108,58,31,.15)}
+.sidebar{width:100%;background:linear-gradient(175deg,#fffaf3 0%,#fff1e3 52%,#ffe8d4 100%);padding:30px 17px}
+.businessShell{grid-template-columns:272px minmax(0,1fr)}
+.sidebarNav{gap:5px}.sidebarNav button,.sideEnd>button{font-weight:750;min-height:49px;border-radius:11px;font-size:13px;padding:10px 13px}
+.sidebarNav button:focus-visible,.sideEnd>button:focus-visible{outline:3px solid #9e3915;outline-offset:2px}
+.sidebarNav button.active{background:linear-gradient(110deg,#ffe2ca,#fff0de);color:#8a3715;box-shadow:inset 4px 0 #e96826,0 6px 16px #9c51171a}
+.sidebarNav button svg{flex-shrink:0}.sidebarNav button em{font-size:11px}
+.modeSwitch{background:linear-gradient(120deg,#f7e1cd,#fff4e8)}.modeSwitch button{min-height:50px;border-radius:11px;font-size:13px}
+.modeSwitch button.selected{background:linear-gradient(135deg,#bb4a16,#973b14);color:white;box-shadow:0 7px 18px #9e46163a}
+.buttonPrimary,.buttonSecondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:12px;padding:13px 21px;font-size:14px;font-weight:800;text-align:center;line-height:1.3}
+.buttonPrimary{border:1px solid #a63b13;color:#fff;background:linear-gradient(135deg,#c24b18,#a83e15);box-shadow:0 8px 18px #873d2336}
+.buttonSecondary{border:1px solid #e7b88e;color:#924019;background:linear-gradient(130deg,#fffefa,#fff0df);box-shadow:0 6px 15px #b367261a}
+.buttonPrimary svg,.buttonSecondary svg{flex-shrink:0}
+.whiteCta,.featureCopy button,.viewDish,.categories button.active{background:linear-gradient(135deg,#c24b18,#a83e15);color:#fff;border-color:#a83e15;box-shadow:0 8px 18px #8d422d39}
+.whiteCta{background:linear-gradient(125deg,#fffaf3,#ffe2c9);color:#803411;border-color:#f8c398}
+.featureCopy button,.viewDish{min-height:52px;font-size:14px}
+.statCard{box-shadow:0 16px 30px #a965301b;border-color:#ebd4be}
+.statCard:nth-child(2){background:linear-gradient(130deg,#fff9ef,#ffe4cc)}
+.statCard:nth-child(3){background:linear-gradient(135deg,#fffdf9,#f8e5d6)}
+.statName,.panelTop h3,.activityInfo b{color:#352920}.topContent p,.panelTop p,.statCard small,.activityInfo small{color:#665c54}
+.sectionHero{background-size:cover;background-position:center;min-height:348px;border-radius:24px;display:flex;align-items:center;overflow:hidden;padding:45px clamp(28px,5vw,67px);border:1px solid #c47d53;box-shadow:0 22px 44px #7540192e}
+.sectionHeroCopy{max-width:620px}.sectionHero h2{font-size:clamp(34px,3.8vw,53px);line-height:1.16;font-weight:500;letter-spacing:-.035em;color:#fff8ee;margin:18px 0}.sectionHero p{max-width:525px;color:#fff5ea;font-size:16px;line-height:1.7}
+.sectionHero .welcomeEyebrow{color:#ffe1c6}.sectionLayout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.8fr);align-items:start;gap:24px;margin-top:28px}
+.recordPanel{padding:clamp(22px,3vw,35px);background:linear-gradient(140deg,#fffdfa 0%,#fff8f0 100%);box-shadow:var(--mc-shadow)}
+.recordPanel .panelTop{margin-bottom:18px}.recordPanel .panelTop h3{font-size:24px;margin-top:10px}.recordActivity{padding:19px 0}.recordActivity .activityInfo b{font-size:15px}.recordActivity .activityInfo small{font-size:13px;line-height:1.55}
+.recordPanel .inlineSafety{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5;color:#784322;margin-top:22px}.recordPanel .inlineSafety svg{flex-shrink:0}
+.sectionAside{background:radial-gradient(circle at 100% 0,#ffe4c9 0%,transparent 56%),linear-gradient(145deg,#fffaf2,#f7dfc9);border:1px solid #e7c5a9;border-radius:21px;box-shadow:0 15px 36px #6f3e1a17;padding:31px 27px}
+.sectionAside h3{font-family:"Playfair Display",Georgia,serif;font-size:clamp(25px,2.5vw,33px);font-weight:500;line-height:1.24;margin:18px 0 9px}
+.sectionAside p{line-height:1.7;font-size:15px;color:#665246}.sectionAside .buttonPrimary{width:100%;margin-top:15px}
+.asideDetail{display:flex;align-items:flex-start;gap:12px;border-top:1px solid #e6c2a3;padding-top:22px;margin-top:26px;font-size:13px;line-height:1.6;color:#74462e}.asideDetail svg{flex-shrink:0;color:#a3431a}
+.categories button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;font-size:14px}.heart{border:1px solid #f3d8c3}.heart[aria-pressed="true"]{background:#ffe4ca;color:#a63f15;border-color:#c76332}
+.menuResultCount{margin:0 0 18px;color:#765a49;font-size:13px;font-weight:700}
+.emptyMenu{display:flex;flex-direction:column;align-items:center;text-align:center;margin:15px auto 0;padding:45px 25px;background:linear-gradient(135deg,#fffefd,#fff0e0);border:1px solid #efd7bd;border-radius:19px;color:#a94721}
+.emptyMenu h3{font-family:"Playfair Display",Georgia,serif;font-size:26px;margin:12px 0 2px;color:#2d251f}.emptyMenu p{font-size:14px;line-height:1.65;color:#665c54}.emptyMenu .buttonSecondary{margin-top:13px}
+.safetyBanner{box-shadow:0 9px 18px #945b2320}.safetyBanner button{min-height:48px;background:#8f4b31}.miniStatus.pending{color:#863312;background:#ffe9d3}.miniStatus.complete{color:#63412c;background:#f9ebdd}
+.footer{font-size:13px}.previewStripe{letter-spacing:.045em}.previewStripe span:last-child{font-size:11px}
+@media(max-width:1120px){.businessShell{grid-template-columns:234px minmax(0,1fr)}.sidebar{padding:23px 10px}.sectionLayout{grid-template-columns:1fr}.sectionAside{display:grid;grid-template-columns:1fr auto;column-gap:18px}.sectionAside .overline,.sectionAside h3,.sectionAside p{grid-column:1}.sectionAside .buttonPrimary{grid-column:2;grid-row:2/4;align-self:center;width:auto}.asideDetail{grid-column:1/-1}}
+@media(max-width:760px){.businessShell{display:block}.sidebar{padding:10px 12px}.sidebarNav{display:flex;overflow-x:auto;gap:7px;padding-bottom:7px;scrollbar-width:thin}.sidebarNav button{white-space:nowrap;width:auto;min-height:50px;flex-shrink:0}.sectionHero{padding:31px 25px;min-height:290px}.sectionHero h2{font-size:36px}.sectionLayout{gap:17px;margin-top:18px}.sectionAside{display:block;padding:24px}.recordPanel .panelTop{flex-wrap:wrap}.recordActivity .miniStatus{white-space:normal}.dinerHeader{background-position:58% center}.previewStripe{font-size:10px}}
+@media(max-width:420px){.sectionHero h2{font-size:32px}.sectionHero p{font-size:14px}.sectionAside h3{font-size:26px}.recordPanel{padding:20px}.recordActivity{gap:9px}.recordActivity .activityInfo{min-width:140px}.recordActivity .miniStatus{max-width:120px}.categories button{padding:8px 14px}.dinerTitle{flex-wrap:wrap}.safetyBanner{padding:17px 14px}.statCard{padding:16px}}

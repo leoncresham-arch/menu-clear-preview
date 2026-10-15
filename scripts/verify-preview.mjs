@@ -1,0 +1,33 @@
+// Menu Clear preview smoke checks; runs before every Vite production build.
+// Protects the approved no-animation, photography-led design from regressions.
+import {readFileSync, existsSync} from 'node:fs';
+import assert from 'node:assert/strict';
+
+const privateEntry = existsSync('src/PreviewApp.jsx');
+const entryPath = privateEntry ? 'src/PreviewApp.jsx' : 'src/main.jsx';
+const stylesheetPath = privateEntry ? 'src/preview.css' : 'src/styles.css';
+const entry = readFileSync(entryPath,'utf8');
+const css = readFileSync(stylesheetPath,'utf8');
+const html = readFileSync('index.html','utf8');
+
+function requirePart(value,label){ assert(entry.includes(value),label+' missing from actual React source'); }
+assert(html.includes('<div id="root">'), 'Root container missing from HTML');
+assert(entry.includes("import './"+stylesheetPath.split('/').pop()+"'"), 'React entry stylesheet import must point to a real file');
+requirePart('SignatureGallery onCustomer', 'Restaurant photography gallery');
+requirePart('dinerHeroPhoto', 'Customer photograph hero');
+requirePart('GalleryPhoto', 'Photo load and failure handling');
+requirePart('Important food allergy information', 'Customer allergy warning');
+requirePart('Cross-contact may occur', 'Cross-contact warning');
+requirePart('Fictional restaurant and ingredient information', 'Visible demo-only disclaimer');
+requirePart('Menu management', 'Business navigation');
+assert((entry.match(/https:\/\/images\.unsplash\.com/g)??[]).length >= 8, 'Photo resources unexpectedly missing');
+assert(!css.includes('@keyframes'), 'Animated keyframes forbidden');
+for (const match of css.matchAll(/(?:animation|transition)\s*:\s*([^;}]+)/gi)){
+  assert(/^none\b/i.test(match[1].trim()),'No CSS motion allowed: '+match[0]);
+}
+assert(css.includes('animation:none!important;transition:none!important'), 'Static-only interaction reset missing');
+if (!privateEntry){
+  const config = readFileSync('vite.config.js','utf8');
+  assert(config.includes('/menu-clear-preview/'), 'GitHub Pages base path incorrect');
+}
+console.log('Menu Clear design smoke checks passed ('+(privateEntry?'private app':'public Safari preview')+').');

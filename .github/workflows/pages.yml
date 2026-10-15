@@ -22,6 +22,12 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:layout
+      - name: Save rendered visual review screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: menu-clear-visual-review
+          path: test-results/visual/
+          if-no-files-found: warn
       - name: Upload failed layout diagnostics
         if: failure()
         uses: actions/upload-artifact@v4

@@ -8,7 +8,7 @@ for (const viewport of [
 ]) {
   test('photographic hero is bounded and readable at '+viewport.name,async({page})=>{
     await page.setViewportSize({width:viewport.width,height:viewport.height});
-    await page.goto('/',{waitUntil:'domcontentloaded'});
+    await page.goto('./',{waitUntil:'domcontentloaded'});
     await expect(page.locator('.welcomePanel')).toBeVisible();
     await expect(page.locator('.welcomePanelCopy h2')).toBeVisible();
     await expect(page.locator('.welcomePanelMedia')).toBeVisible();

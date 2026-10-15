@@ -186,3 +186,31 @@ button:focus-visible,input:focus-visible{outline:3px solid #9a3a10;outline-offse
  .signatureIntro h2{font-size:29px}.signatureGrid{gap:10px}.signatureCard .galleryPhoto{height:174px}.signatureCardText h3{font-size:16px}.signatureCardText span{font-size:8px}
  .dinerHeader{padding:26px 20px}.dinerTop h1{font-size:42px}.dinerHeroPhoto{height:220px}.dinerHeroDetail span{font-size:9px}.dinerTitle h2{font-size:36px}
 }
+
+/* Premium header / typography revision 2026-10-15 — approved cream & orange, static only */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--mc-display:"Playfair Display",Georgia,serif;--mc-body:"Manrope","DM Sans",system-ui,sans-serif}
+body,.app,button,input{font-family:var(--mc-body)}body{letter-spacing:-.012em}
+.globalHeader{min-height:110px;padding:19px clamp(20px,4.2vw,72px);background:linear-gradient(110deg,#fffefa 0%,#fff8f0 47%,#fff0df 100%);border-bottom:1px solid #e8c6a9;box-shadow:inset 0 2px 0 #fff,0 12px 29px #8b4a2514}
+.headerBrand{display:flex;align-items:center;gap:25px;min-width:0}.identity{gap:14px;flex-shrink:0}
+.logoMark{width:56px;height:56px;border-radius:15px;background:linear-gradient(140deg,#ffb678,#f8772d 58%,#d9541f);border:1px solid #ed8f55;box-shadow:inset 0 2px 1px #ffd5ab,0 10px 22px #af622d33}
+.logoMark svg{width:39px;height:39px}
+.brandName{font-family:var(--mc-display);font-size:clamp(28px,2.3vw,37px);font-weight:600;letter-spacing:-1.65px;line-height:1.02;color:#28201b}
+.brandName span{color:#dc5720}.brandName small{margin-top:8px;font-family:var(--mc-body);font-weight:800;font-size:9px;line-height:1.4;letter-spacing:.24em;color:#985232}
+.brandDivider{height:47px;width:1px;background:linear-gradient(180deg,transparent,#d8a67e,transparent);flex:none}
+.brandDescriptor{display:grid;gap:6px;min-width:0}.brandDescriptor span{color:#b2643d;font-size:9px;letter-spacing:.17em;font-weight:800;white-space:nowrap}
+.brandDescriptor strong{font-family:var(--mc-display);font-size:17px;font-weight:500;color:#71442d;line-height:1.3;white-space:nowrap}
+.headerActions{gap:20px}.headerEdition{color:#9a674b;letter-spacing:.15em;font-size:10px;font-weight:800;white-space:nowrap}
+.modeSwitch{padding:5px;border-radius:13px;box-shadow:inset 0 1px 2px #a9693421;border:1px solid #e9be9e;background:#fae6d3;gap:4px}
+.modeSwitch button{font-family:var(--mc-body);font-size:12px;font-weight:800;letter-spacing:0;min-height:48px;padding:11px 17px;border-radius:9px;color:#6f4632}
+.modeSwitch button.selected{background:linear-gradient(150deg,#f97832,#d95520 65%,#b64b1c);box-shadow:inset 0 1px 0 #ffb887,0 6px 14px #a94f243b;color:#fff}
+h1,h2,.sectionHero h2,.signatureIntro h2,.dinerTitle h2,.dinerTop h1,.welcomePanel h2,.brandName{font-family:var(--mc-display);font-weight:600;letter-spacing:-.038em}
+h3,.panelTop h3,.statName,.activityInfo b,.quickGrid strong{font-family:var(--mc-body);letter-spacing:-.018em}
+.topContent h1{font-size:clamp(37px,3.4vw,51px);line-height:1.16}
+.overline,.welcomeEyebrow,.sideLabel,.editorialDivider,.dinerEditorial{letter-spacing:.14em;font-family:var(--mc-body);font-weight:800}
+.whiteCta,.buttonPrimary,.buttonSecondary,.viewDish,.featureCopy button,.categories button{font-family:var(--mc-body);font-weight:800}
+.signatureCardText h3,.foodName h3{font-family:var(--mc-display)}
+@media(max-width:1220px){.headerEdition{display:none}.brandDescriptor strong{font-size:15px}.headerBrand{gap:16px}}
+@media(max-width:980px){.brandDescriptor,.brandDivider{display:none}.globalHeader{padding:18px 24px;min-height:95px}.modeSwitch button{padding:11px 14px}}
+@media(max-width:760px){.globalHeader{align-items:center;gap:14px;padding:16px 18px}.headerBrand{width:100%;justify-content:center}.headerActions{width:100%;justify-content:center}.modeSwitch{width:100%;max-width:490px}.modeSwitch button{flex:1;font-size:13px}.brandName{font-size:32px}.logoMark{width:51px;height:51px}.identity{gap:12px}}
+@media(max-width:420px){.brandName{font-size:30px}.brandName small{font-size:8px}.modeSwitch button{font-size:12px;padding:10px 8px}.brandName small{letter-spacing:.18em}}

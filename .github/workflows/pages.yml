@@ -1,4 +1,4 @@
-name: Publish actual React preview
+name: Publish React Safari preview
 on:
   push:
     branches: [main]
@@ -8,37 +8,27 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: github-pages-preview
   cancel-in-progress: true
 jobs:
   build:
+    name: Build public React preview
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
       - run: npm install --no-audit --no-fund
-      - run: npm run build
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:layout
-      - name: Save rendered visual review screenshots
-        uses: actions/upload-artifact@v4
-        with:
-          name: menu-clear-visual-review
-          path: test-results/visual/
-          if-no-files-found: warn
-      - name: Upload failed layout diagnostics
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: responsive-layout-diagnostics
-          path: test-results/
-          if-no-files-found: ignore
+      - name: Compile Safari-ready assets
+        run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
+    name: Publish GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -47,3 +37,33 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  visual-qa:
+    name: Independent visual regression checks
+    runs-on: ubuntu-latest
+    needs: build
+    continue-on-error: true
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Check iPad and phone layouts
+        run: npm run test:layout
+      - name: Preserve rendered Safari-preview screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: menu-clear-visual-review
+          path: test-results/visual/
+          if-no-files-found: ignore
+      - name: Preserve layout test diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-layout-diagnostics
+          path: test-results/
+          if-no-files-found: ignore

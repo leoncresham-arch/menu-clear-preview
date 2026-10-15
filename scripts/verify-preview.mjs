@@ -14,6 +14,8 @@ function requirePart(value,label){ assert(entry.includes(value),label+' missing 
 assert(html.includes('<div id="root">'), 'Root container missing from HTML');
 assert(entry.includes("import './"+stylesheetPath.split('/').pop()+"'"), 'React entry stylesheet import must point to a real file');
 requirePart('SignatureGallery onCustomer', 'Restaurant photography gallery');
+requirePart('className="welcomePanelCopy"', 'Bounded hero text column');
+requirePart('className="welcomePanelMedia"', 'Independent hero photo column');
 requirePart('dinerHeroPhoto', 'Customer photograph hero');
 requirePart('GalleryPhoto', 'Photo load and failure handling');
 requirePart('Important food allergy information', 'Customer allergy warning');
@@ -35,6 +37,9 @@ if (!privateEntry){
 assert(css.length < 34000, 'Canonical CSS exceeds design-system complexity budget; refactor instead of stacking overrides.');
 assert((css.match(/@import/g)??[]).length === 1, 'Only one consolidated typography import is allowed.');
 assert(css.includes('--shadow-md') && css.includes('--stroke'), 'Shared elevation and border design tokens are required.');
+assert(css.includes('grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)'), 'Hero must use bounded CSS grid columns.');
+assert(!css.includes('.welcomePanel::before') && !css.includes('.welcomePanel::after'), 'Do not reintroduce overlapping CSS hero images.');
+assert(css.includes('Instrument Serif') && css.includes('Plus Jakarta Sans'), 'Approved professional typography pairing is required.');
 for(const selector of ['.globalHeader','.modeSwitch','.sidebarNav','.welcomePanel','.signatureGrid','.dishGrid','.dinerHeader','.safetyBanner']){
   assert(css.includes(selector), 'Required professional UI component missing: '+selector);
 }

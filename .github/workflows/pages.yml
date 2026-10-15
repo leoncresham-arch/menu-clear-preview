@@ -20,6 +20,15 @@ jobs:
           node-version: '22'
       - run: npm install --no-audit --no-fund
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:layout
+      - name: Upload failed layout diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-layout-diagnostics
+          path: test-results/
+          if-no-files-found: ignore
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

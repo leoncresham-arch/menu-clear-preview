@@ -38,7 +38,7 @@ assert(css.length < 34000, 'Canonical CSS exceeds design-system complexity budge
 assert((css.match(/@import/g)??[]).length === 0, 'Use bundled local font assets instead of runtime @import requests.');
 assert(entry.includes("@fontsource/instrument-serif/latin-400.css") && entry.includes("@fontsource/plus-jakarta-sans/latin-400.css"), 'Real self-hosted typography imports missing.');
 assert(css.includes('--shadow-md') && css.includes('--stroke'), 'Shared elevation and border design tokens are required.');
-assert(css.includes('grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)'), 'Hero must use bounded CSS grid columns.');
+assert(css.includes('grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)'), 'Hero must use bounded CSS grid columns.');
 assert(!css.includes('.welcomePanel::before') && !css.includes('.welcomePanel::after'), 'Do not reintroduce overlapping CSS hero images.');
 assert(css.includes('Instrument Serif') && css.includes('Plus Jakarta Sans'), 'Approved professional typography pairing is required.');
 for(const selector of ['.globalHeader','.modeSwitch','.sidebarNav','.welcomePanel','.signatureGrid','.dishGrid','.dinerHeader','.safetyBanner']){

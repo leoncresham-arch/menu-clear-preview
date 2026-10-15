@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {LayoutDashboard,BookOpen,Leaf,ClipboardCheck,Settings,ChevronDown,ArrowUpRight,Bell,Search,Plus,ArrowRight,Clock3,AlertTriangle,CheckCircle2,UtensilsCrossed,SlidersHorizontal,Heart,MapPin,Menu as MenuIcon,FileClock,ShieldAlert,ScanLine,ExternalLink} from 'lucide-react';
-import './preview.css';
+import './styles.css';
 
 const products=[
 {name:'Avocado & Egg Toast',desc:'Sourdough, smashed avocado, soft eggs, chili flakes',price:'$12.50',image:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&q=85',allergens:'Wheat, egg',note:'Contains declared allergens'},

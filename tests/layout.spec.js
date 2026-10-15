@@ -47,6 +47,27 @@ for (const viewport of [
       expect(geometry.media.top,'Mobile photo must stack below headline').toBeGreaterThanOrEqual(geometry.copy.bottom-2);
     }
 
+    // Reference-quality gallery cards must reserve separate photo and content regions.
+    const firstCard=page.locator('.signatureCard').first();
+    await expect(firstCard).toBeVisible();
+    const cardParts=await firstCard.evaluate((card)=>{
+      const image=card.querySelector('.signatureImage').getBoundingClientRect();
+      const details=card.querySelector('.signatureCardText').getBoundingClientRect();
+      const root=card.getBoundingClientRect();
+      const action=card.querySelector('.signatureCardText button').getBoundingClientRect();
+      return {imageBottom:image.bottom,detailsTop:details.top,cardRight:root.right,
+        actionWidth:action.width,actionHeight:action.height,viewportWidth:document.documentElement.clientWidth};
+    });
+    expect(cardParts.detailsTop,'Dish text must begin BELOW the food photograph').toBeGreaterThanOrEqual(cardParts.imageBottom-2);
+    expect(cardParts.cardRight,'Dish card must not spill beyond the viewport').toBeLessThanOrEqual(cardParts.viewportWidth+2);
+    expect(cardParts.actionWidth,'Dish action must have a touch-friendly width').toBeGreaterThanOrEqual(42);
+    expect(cardParts.actionHeight,'Dish action must have a touch-friendly height').toBeGreaterThanOrEqual(42);
+    const headlineFits=await page.locator('.welcomePanel h2').evaluate((element)=>{
+      const heading=element.getBoundingClientRect(),column=element.closest('.welcomePanelCopy').getBoundingClientRect();
+      return heading.right<=column.right+2 && heading.left>=column.left-2;
+    });
+    expect(headlineFits,'Editorial hero heading must remain in its dedicated column').toBe(true);
+
     await page.getByRole('button',{name:'Guest menu'}).click();
     await expect(page.locator('.dinerHeader')).toBeVisible();
     await expect(page.getByText('Important food allergy information')).toBeVisible();

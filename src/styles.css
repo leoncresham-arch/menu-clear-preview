@@ -77,3 +77,112 @@
 @media(max-width:1120px){.businessShell{grid-template-columns:234px minmax(0,1fr)}.sidebar{padding:23px 10px}.sectionLayout{grid-template-columns:1fr}.sectionAside{display:grid;grid-template-columns:1fr auto;column-gap:18px}.sectionAside .overline,.sectionAside h3,.sectionAside p{grid-column:1}.sectionAside .buttonPrimary{grid-column:2;grid-row:2/4;align-self:center;width:auto}.asideDetail{grid-column:1/-1}}
 @media(max-width:760px){.businessShell{display:block}.sidebar{padding:10px 12px}.sidebarNav{display:flex;overflow-x:auto;gap:7px;padding-bottom:7px;scrollbar-width:thin}.sidebarNav button{white-space:nowrap;width:auto;min-height:50px;flex-shrink:0}.sectionHero{padding:31px 25px;min-height:290px}.sectionHero h2{font-size:36px}.sectionLayout{gap:17px;margin-top:18px}.sectionAside{display:block;padding:24px}.recordPanel .panelTop{flex-wrap:wrap}.recordActivity .miniStatus{white-space:normal}.dinerHeader{background-position:58% center}.previewStripe{font-size:10px}}
 @media(max-width:420px){.sectionHero h2{font-size:32px}.sectionHero p{font-size:14px}.sectionAside h3{font-size:26px}.recordPanel{padding:20px}.recordActivity{gap:9px}.recordActivity .activityInfo{min-width:140px}.recordActivity .miniStatus{max-width:120px}.categories button{padding:8px 14px}.dinerTitle{flex-wrap:wrap}.safetyBanner{padding:17px 14px}.statCard{padding:16px}}
+
+/* Menu Clear — photographic hospitality composition / premium finish
+   Static interactions only. All visual content remains fictional until verified. */
+:root{--ivory:#fffaf3;--cream:#fff8ee;--vanilla:#f8edde;--peach:#ffe4ca;--orange:#f56b2a;--orange-deep:#b44516;--ink:#2d251f;--muted:#665c54;--hairline:rgba(179,108,61,.22)}
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html{-webkit-text-size-adjust:100%}
+body{font-size:16px;line-height:1.5;background:radial-gradient(ellipse at 95% 4%,rgba(255,184,130,.38),transparent 33%),radial-gradient(ellipse at 0 75%,rgba(255,227,197,.50),transparent 45%),linear-gradient(165deg,#fffaf4 0%,#fff6ec 45%,#f9e9d8 100%);color:var(--ink)}
+button{letter-spacing:.005em;font-weight:750;-webkit-tap-highlight-color:transparent}
+button:focus-visible,input:focus-visible{outline:3px solid #9a3a10;outline-offset:3px}
+.globalHeader{background:linear-gradient(110deg,#fffdf9 25%,#fff3e5 100%);box-shadow:0 8px 26px rgba(101,55,25,.06);border-color:var(--hairline)}
+.brandName{font-family:"Playfair Display",Georgia,serif;letter-spacing:-1.8px;font-size:33px}.brandName span{color:#d84f1d}.brandName small{font-family:"DM Sans",sans-serif;letter-spacing:1.55px;font-size:9px;color:#8e4c30}
+.logoMark{border-radius:16px;background:linear-gradient(145deg,#ffb46f,#f56b2a);border:1px solid #ef8c55;box-shadow:inset 0 2px 0 rgba(255,255,255,.30),0 9px 24px rgba(193,92,38,.23)}
+.modeSwitch{border:1px solid #efcfb7;background:#ffead9;padding:5px;border-radius:14px}.modeSwitch button{min-height:49px;font-size:14px;line-height:1.2;padding:11px 19px;border-radius:10px}
+.modeSwitch button.selected{background:linear-gradient(145deg,#f9752e,#ba4519);box-shadow:inset 0 1px 0 #ffad7b,0 6px 18px rgba(163,69,25,.28);color:#fff}
+.previewStripe{background:#6c3623;color:#fff6ed;min-height:35px;font-size:12px;letter-spacing:.05em}
+.sidebar{background:linear-gradient(180deg,#fff8ef 0%,#fff0df 53%,#ffe8d7 100%);border-right:1px solid rgba(189,119,75,.2)}
+.org{background:linear-gradient(120deg,#fffdfa,#fff1df);border:1px solid #efceb4;box-shadow:0 7px 20px #98582d14;padding:14px;border-radius:16px}.orgAvatar{background:linear-gradient(135deg,#ff9b55,#ed6c31);color:#fff;font-size:15px;border-radius:11px;box-shadow:0 5px 14px #e6713240}
+.org strong{font-size:15px;letter-spacing:-.015em}.org small{font-size:12px}
+.sidebarNav button{min-height:49px;font-size:14px;line-height:1.2;letter-spacing:.005em;border-radius:12px}
+.sidebarNav button.active{background:linear-gradient(115deg,#ffe1c9,#fff0e1);color:#8c3512;box-shadow:inset 4px 0 #ed6d2c,0 6px 17px #9b512517}
+.sidebarNav button:hover,.sideEnd>button:hover{background:#ffe2cb;color:#8c3512}.sidebarNav button.active:hover{background:linear-gradient(115deg,#ffdac0,#ffe8d2)}
+.helpCard{background:linear-gradient(125deg,#ffe2c8,#fff5e9);border:1px solid #efceb5;box-shadow:0 7px 20px rgba(126,78,40,.10)}.helpCard p{font-size:13px}
+.businessMain{background:radial-gradient(circle at 96% 8%,rgba(255,211,168,.50),transparent 38%),radial-gradient(circle at 0 55%,rgba(255,239,215,.80),transparent 35%);padding-top:42px}
+.topContent{margin-bottom:28px}.topContent h1{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:-.045em;font-size:clamp(34px,3.5vw,49px);line-height:1.15}
+.topContent p{font-size:16px}.topBadge{display:flex;gap:12px;align-items:center;padding:7px 7px 7px 16px;background:#fffbf5;border:1px solid #edd6c2;border-radius:13px;box-shadow:0 8px 22px #6b391012;color:#77513b;font-size:12px;font-weight:750}
+.topBadgeDot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#f56b2a;box-shadow:0 0 0 3px #ffe3ce}.avatarCircle{border-radius:10px;color:#923c18;background:linear-gradient(130deg,#ffe2cb,#ffca9f)}
+.welcomePanel{isolation:isolate;min-height:354px;border-radius:24px;border:1px solid #efc69e;background:radial-gradient(circle at 18% 4%,#fffdf5,transparent 65%),linear-gradient(101deg,#fff7e9 0%,#ffe9d1 45%,#ffcc97 100%);box-shadow:inset 0 2px rgba(255,255,255,.7),0 24px 42px rgba(121,62,32,.17);color:var(--ink);overflow:hidden;padding:46px clamp(28px,4.8vw,69px)}
+.welcomePanel:before{content:"";position:absolute;inset:0 0 0 54%;background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1100&q=84") 50%/cover;clip-path:ellipse(88% 98% at 95% 52%);opacity:.96;z-index:0}
+.welcomePanel:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49%,rgba(244,144,70,.16) 73%,rgba(101,45,15,.20));pointer-events:none;z-index:0}
+.welcomePanel>div:first-child{position:relative;z-index:1;max-width:515px}.welcomePanel .welcomeEyebrow{font-size:12px;font-weight:850;letter-spacing:.12em;color:#98502c}
+.welcomePanel h2{font-size:clamp(36px,3.4vw,51px);font-weight:600;line-height:1.14;letter-spacing:-.04em;margin:18px 0 15px;color:#35251f}
+.welcomePanel p{font-size:16px;max-width:445px;line-height:1.67;color:#625044}.welcomePanel .whiteCta{margin-top:22px}
+.whiteCta,.buttonPrimary,.featureCopy button,.viewDish{background:linear-gradient(145deg,#f97730 0%,#d9571c 60%,#b84818 100%);color:white;border:1px solid #b94715;border-bottom-color:#963d18;border-radius:12px;min-height:52px;padding:13px 21px;display:inline-flex;align-items:center;justify-content:center;gap:10px;box-shadow:inset 0 1px 0 rgba(255,255,255,.33),0 7px 0 -4px rgba(126,49,16,.36),0 10px 22px rgba(158,65,26,.25);font-family:"DM Sans",sans-serif;font-size:14px;font-weight:800;line-height:1.4}
+.whiteCta:hover,.buttonPrimary:hover,.featureCopy button:hover,.viewDish:hover{background:linear-gradient(145deg,#e96526,#b94718);color:white;transform:none}
+.whiteCta:active,.buttonPrimary:active,.featureCopy button:active,.viewDish:active{background:#9d3a13;box-shadow:inset 0 2px 4px rgba(0,0,0,.14)}
+.buttonSecondary{background:linear-gradient(125deg,#fffefa,#fff0de);border:1px solid #e8bd99;border-bottom-color:#cfa277;color:#95411a;min-height:51px;border-radius:12px;padding:12px 19px;font-size:14px;font-weight:800;box-shadow:inset 0 1px white,0 6px 14px rgba(141,77,32,.12)}
+.buttonSecondary:hover{background:#ffe4c9;border-color:#d7986b}
+.signatureSection{margin:38px 0 40px}
+.signatureIntro{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:24px}
+.signatureIntro>div{max-width:760px}.signatureIntro .overline{display:block;font-size:12px;letter-spacing:.12em;color:#98502c;font-weight:800}
+.signatureIntro h2{font-family:"Playfair Display",Georgia,serif;color:var(--ink);font-size:clamp(28px,3.1vw,44px);font-weight:550;line-height:1.18;letter-spacing:-.037em;margin:12px 0}
+.signatureIntro p{color:#6a5547;font-size:15px;max-width:660px;line-height:1.55;margin:0}
+.signatureAction{white-space:nowrap;flex-shrink:0}.signatureAction svg{flex-shrink:0}
+.signatureGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
+.signatureCard{position:relative;min-width:0;overflow:hidden;border-radius:19px;background:#f7dcc1;border:1px solid #f5cba5;box-shadow:0 18px 32px rgba(104,57,31,.20);isolation:isolate}
+.signatureCard .galleryPhoto{width:100%;height:240px}.galleryPhoto{overflow:hidden;background:#f8e7d4}.galleryPhoto>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.signatureCard .galleryPhoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 27%,rgba(42,22,11,.12) 44%,rgba(32,17,10,.82) 100%);pointer-events:none}
+.signatureCardText{position:absolute;inset:auto 0 0;padding:19px 17px 17px;color:#fff8f1;z-index:1;text-shadow:0 1px 4px rgba(0,0,0,.22)}
+.signatureCardText span{font-size:9px;font-weight:800;letter-spacing:.12em;color:#ffe3ce}
+.signatureCardText h3{font-family:"Playfair Display",Georgia,serif;font-size:20px;line-height:1.2;font-weight:600;margin:7px 0 5px;color:#fff9f2;letter-spacing:-.02em}
+.signatureCardText p{font-size:13px;font-weight:800;margin:0;color:#ffe9d7}
+.photoUnavailable{height:100%;width:100%;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,#f8e4cc,#ffe9d5);padding:20px;color:#71432d;font-size:14px;font-weight:700}
+.signatureCard:has(.photoUnavailable){box-shadow:0 10px 20px #80532912}.signatureCard:has(.photoUnavailable) .signatureCardText{position:static;color:#533728;text-shadow:none}.signatureCard:has(.photoUnavailable) .signatureCardText h3{color:#2d251f}.signatureCard:has(.photoUnavailable) .signatureCardText span,.signatureCard:has(.photoUnavailable) .signatureCardText p{color:#744f3e}
+.editorialDivider{margin:32px 4px 19px;font-size:12px}
+.statGrid{gap:21px}.statCard{min-height:191px;border:1px solid #ead1b6;border-radius:19px;background:linear-gradient(145deg,#fffefa 15%,#fff0e0);box-shadow:inset 0 1px white,0 16px 33px rgba(119,67,34,.11)}
+.statNumber{font-family:"Playfair Display",Georgia,serif;font-size:41px;line-height:1.12;font-weight:650;letter-spacing:-.04em;color:#38291f}.statName{font-size:15px}.statCard small{font-size:13px}
+.whitePanel{background:linear-gradient(150deg,#fffefa 0%,#fff9f1 100%);border:1px solid #eecdb5;box-shadow:0 17px 36px #7d4f2914}.panelTop h3{font-size:19px}.panelTop p{font-size:14px}
+.quickGrid button{min-height:160px;gap:9px;padding:19px;background:linear-gradient(145deg,#fffdf8,#fff0e0);border:1px solid #eac8ae;border-radius:14px;box-shadow:inset 0 1px white,0 8px 20px rgba(124,64,24,.07)}
+.quickGrid button:hover{background:#ffe9d4;border-color:#d99b6c;transform:none}
+.quickGrid strong{font-size:15px}.quickGrid small{font-size:13px}.activityInfo b{font-size:14px}.activityInfo small{font-size:12px}
+.sectionHero{box-shadow:inset 0 1px 0 #ffffff42,0 23px 42px #7e482126}.sectionHero h2{font-family:"Playfair Display",Georgia,serif;font-size:clamp(36px,4vw,55px)}
+.customerMain{background:radial-gradient(circle at 92% 7%,#ffdbb5,transparent 32%),linear-gradient(155deg,#fffaf3,#fff1e1);padding-top:30px}
+.dinerHeader{background:radial-gradient(circle at 10% 15%,#fffdf7,transparent 65%),linear-gradient(125deg,#fff6e6 0%,#ffe2c7 70%,#fbbb82 100%);border:1px solid #eec3a2;box-shadow:inset 0 2px 0 #ffffff88,0 22px 42px #905b3526;min-height:490px;overflow:hidden;color:#35271f;padding:55px clamp(26px,5vw,69px);isolation:isolate}
+.dinerHeader:before{content:"";position:absolute;width:470px;height:470px;border-radius:50%;right:-170px;top:-180px;border:1px solid rgba(210,103,46,.24);box-shadow:0 0 0 48px rgba(255,255,255,.12),0 0 0 98px rgba(252,182,116,.13);pointer-events:none}
+.dinerHeader>span{color:#97451f;font-size:12px;font-weight:800;letter-spacing:.12em}
+.dinerTop{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr);gap:30px;align-items:center;margin-top:8px}
+.dinerTop .dinerHeroCopy{max-width:590px}.dinerKicker{font-size:11px;letter-spacing:.15em;font-weight:850;color:#9e512f}
+.dinerTop h1{font-family:"Playfair Display",Georgia,serif;color:#34241f;line-height:1.08;font-size:clamp(45px,5vw,69px);font-weight:550;margin:22px 0 20px;max-width:600px}
+.dinerTop h1 em{color:#d7581f;font-style:italic}
+.dinerTop p{font-size:17px;line-height:1.65;color:#60483a;max-width:490px}
+.dinerHeroDetail{margin-top:26px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:#935234;font-size:10px;font-weight:800;letter-spacing:.12em}.dinerHeroDetail span+span{border-left:1px solid #d69e7a;padding-left:16px}
+.dinerHeroPhoto{width:100%;height:333px;position:relative;padding:9px;background:linear-gradient(130deg,#fffef7,#fbd2aa);border:1px solid #f8d0aa;border-radius:185px 185px 24px 24px;box-shadow:0 16px 29px #89543c30;transform:none}
+.dinerHeroPhoto .galleryPhoto{height:100%;border-radius:180px 180px 17px 17px;overflow:hidden}
+.dinerHeroPhoto .galleryPhoto img{object-fit:cover;object-position:center}
+.dinerHeroPhoto>span{position:absolute;bottom:23px;right:22px;padding:11px 15px;background:#fff8ebed;border:1px solid #ebc9ad;border-radius:8px;color:#884722;font-size:10px;font-weight:850;letter-spacing:.13em;box-shadow:0 7px 17px #3d24182b}
+.dinerTitle h2{font-weight:550;letter-spacing:-.04em}.dinerTitle p{font-size:16px}
+.filterBar{background:linear-gradient(135deg,#fffdf7,#fff2e6);box-shadow:0 12px 26px rgba(116,61,27,.12);border-color:#eecdb2}
+.categories button{border-radius:10px;min-height:50px;padding:12px 19px;color:#76452d;background:#fffdf8;border:1px solid #e6c5a6;box-shadow:0 5px 11px rgba(124,69,35,.06);font-size:14px}
+.categories button.active{background:linear-gradient(145deg,#f97730,#bc4b1a);box-shadow:inset 0 1px #ffc197,0 8px 16px #bd672a29;color:white}
+.searchBox{border-radius:11px;background:#fffefa;box-shadow:inset 0 1px white,0 5px 11px #8b49110a}
+.foodCard{box-shadow:inset 0 1px white,0 17px 37px rgba(109,58,29,.15);border-color:#edcfb9;background:linear-gradient(180deg,#fffdf8,#fff8ee)}
+.foodImage{height:270px}.foodImage .galleryPhoto{width:100%;height:100%}.foodImage .galleryPhoto img{object-fit:cover}
+.foodText{padding:24px 25px 26px}.foodName h3{font-family:"Playfair Display",Georgia,serif;font-size:23px;font-weight:600}.foodName b{color:#a63f16;font-size:17px}
+.foodFlags span{font-size:13px;color:#7c421b;border:1px solid #f1d7a9;background:#fff1db;padding:9px 12px}
+.heart{border-radius:11px;min-height:48px;min-width:48px;box-shadow:0 9px 18px #40251735}.viewDish{min-height:51px;margin-top:16px;padding:12px 19px}
+.dinerEditorial{font-size:12px}.safetyBanner{background:#fff0d9;border-color:#deb379;box-shadow:0 8px 21px rgba(145,86,26,.12);border-left:5px solid #ba551e}
+.safetyBanner b{font-size:15px}.safetyBanner p{font-size:14px;line-height:1.65}.safetyBanner button{background:#944b2e;color:white;border-radius:11px;font-size:13px}
+@media(min-width:1500px){.businessMain{max-width:1600px}}
+@media(max-width:1180px){.signatureGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.signatureCard .galleryPhoto{height:260px}.welcomePanel:before{inset:0 0 0 58%}.dinerTop{grid-template-columns:minmax(0,1.1fr) minmax(220px,.8fr)}.dinerHeroPhoto{height:300px}}
+@media(max-width:760px){
+  .globalHeader{gap:12px}.topBadge>span:not(.avatarCircle){display:none}.topBadge{padding:5px;border:0;background:transparent;box-shadow:none}
+  .businessMain{padding-top:27px}.topContent h1{font-size:37px}.welcomePanel{min-height:390px;padding:31px 25px 195px;background:linear-gradient(140deg,#fff9eb,#ffe7cf)}
+  .welcomePanel:before{inset:auto 0 0;width:100%;height:195px;clip-path:ellipse(90% 95% at 60% 100%);background-position:center 45%}
+  .welcomePanel:after{background:linear-gradient(180deg,transparent 60%,rgba(215,113,46,.1))}
+  .welcomePanel>div:first-child{max-width:none}.welcomePanel h2{font-size:37px;line-height:1.12}.welcomePanel p{font-size:15px;margin-top:9px}.welcomePanel .whiteCta{margin-top:12px}
+  .signatureIntro{align-items:flex-start;flex-direction:column;gap:17px}.signatureIntro h2{font-size:34px}
+  .signatureGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.signatureCard .galleryPhoto{height:210px}.signatureCardText{padding:12px}.signatureCardText h3{font-size:17px}
+  .statGrid{gap:10px}.statCard{min-height:150px}.statNumber{font-size:32px}
+  .dinerHeader{min-height:unset;padding:32px 25px 33px}.dinerTop{grid-template-columns:1fr;gap:25px}.dinerTop h1{font-size:48px;max-width:530px}.dinerHeroPhoto{max-width:420px;height:265px;justify-self:center}
+  .dinerHeader:before{width:340px;height:340px;top:70px;right:-180px}.dinerTop p{font-size:16px}
+  .dinerHeroDetail{margin-top:15px}.foodImage{height:255px}
+  .footer{font-size:12px}
+}
+@media(max-width:430px){
+ .brandName{font-size:27px}.brandName small{font-size:7px}.logoMark{height:45px;width:45px}.modeSwitch button{font-size:12px;padding:11px 9px}
+ .topContent h1{font-size:32px}.welcomePanel{padding:26px 20px 188px}.welcomePanel h2{font-size:34px}.welcomePanel p{font-size:14px}.welcomePanel:before{height:190px}
+ .signatureIntro h2{font-size:29px}.signatureGrid{gap:10px}.signatureCard .galleryPhoto{height:174px}.signatureCardText h3{font-size:16px}.signatureCardText span{font-size:8px}
+ .dinerHeader{padding:26px 20px}.dinerTop h1{font-size:42px}.dinerHeroPhoto{height:220px}.dinerHeroDetail span{font-size:9px}.dinerTitle h2{font-size:36px}
+}

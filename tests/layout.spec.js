@@ -74,7 +74,7 @@ for (const viewport of [
     mkdirSync('test-results/visual',{recursive:true});
     await page.screenshot({path:'test-results/visual/business-'+captureName+'.png',fullPage:true});
 
-    await page.getByRole('button',{name:'Guest menu'}).click();
+    await page.getByRole('button',{name:'Guest menu',exact:true}).click();
     await expect(page.locator('.dinerHeader')).toBeVisible();
     await expect(page.getByText('Important food allergy information')).toBeVisible();
     await page.screenshot({path:'test-results/visual/guest-'+captureName+'.png',fullPage:true});

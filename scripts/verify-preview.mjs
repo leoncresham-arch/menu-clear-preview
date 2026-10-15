@@ -30,4 +30,12 @@ if (!privateEntry){
   const config = readFileSync('vite.config.js','utf8');
   assert(config.includes('/menu-clear-preview/'), 'GitHub Pages base path incorrect');
 }
+
+// Keep the premium system maintainable: avoid reverting to 40KB+ of duplicated overrides.
+assert(css.length < 34000, 'Canonical CSS exceeds design-system complexity budget; refactor instead of stacking overrides.');
+assert((css.match(/@import/g)??[]).length === 1, 'Only one consolidated typography import is allowed.');
+assert(css.includes('--shadow-md') && css.includes('--stroke'), 'Shared elevation and border design tokens are required.');
+for(const selector of ['.globalHeader','.modeSwitch','.sidebarNav','.welcomePanel','.signatureGrid','.dishGrid','.dinerHeader','.safetyBanner']){
+  assert(css.includes(selector), 'Required professional UI component missing: '+selector);
+}
 console.log('Menu Clear design smoke checks passed ('+(privateEntry?'private app':'public Safari preview')+').');

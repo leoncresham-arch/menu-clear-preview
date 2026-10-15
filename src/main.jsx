@@ -1,10 +1,10 @@
-import '@fontsource/instrument-serif/400.css';
-import '@fontsource/instrument-serif/400-italic.css';
-import '@fontsource/plus-jakarta-sans/400.css';
-import '@fontsource/plus-jakarta-sans/500.css';
-import '@fontsource/plus-jakarta-sans/600.css';
-import '@fontsource/plus-jakarta-sans/700.css';
-import '@fontsource/plus-jakarta-sans/800.css';
+import '@fontsource/instrument-serif/latin-400.css';
+import '@fontsource/instrument-serif/latin-400-italic.css';
+import '@fontsource/plus-jakarta-sans/latin-400.css';
+import '@fontsource/plus-jakarta-sans/latin-500.css';
+import '@fontsource/plus-jakarta-sans/latin-600.css';
+import '@fontsource/plus-jakarta-sans/latin-700.css';
+import '@fontsource/plus-jakarta-sans/latin-800.css';
 import React, {useState, useEffect} from 'react';
 import {createRoot} from 'react-dom/client';
 import {LayoutDashboard,BookOpen,Leaf,ClipboardCheck,Settings,ChevronDown,ArrowUpRight,Bell,Search,Plus,ArrowRight,Clock3,AlertTriangle,CheckCircle2,UtensilsCrossed,SlidersHorizontal,Heart,MapPin,Menu as MenuIcon,FileClock,ShieldAlert,ScanLine,ExternalLink,Truck,Users,Send,ShieldCheck,CreditCard,FileText,Bookmark} from 'lucide-react';

@@ -1,4 +1,5 @@
 import {test,expect} from '@playwright/test';
+import {mkdirSync} from 'node:fs';
 
 for (const viewport of [
   {width:1474,height:1050,name:'iPad landscape'},
@@ -68,9 +69,15 @@ for (const viewport of [
     });
     expect(headlineFits,'Editorial hero heading must remain in its dedicated column').toBe(true);
 
+    // Preserve real browser captures to compare against the user's approved visual references.
+    const captureName=viewport.name.toLowerCase().replaceAll(' ','-');
+    mkdirSync('test-results/visual',{recursive:true});
+    await page.screenshot({path:'test-results/visual/business-'+captureName+'.png',fullPage:true});
+
     await page.getByRole('button',{name:'Guest menu'}).click();
     await expect(page.locator('.dinerHeader')).toBeVisible();
     await expect(page.getByText('Important food allergy information')).toBeVisible();
+    await page.screenshot({path:'test-results/visual/guest-'+captureName+'.png',fullPage:true});
     const customerOverflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
     expect(customerOverflow,'Diner view must not scroll sideways').toBeLessThanOrEqual(2);
   });

@@ -4,7 +4,8 @@
   "version": "0.2.0",
   "type": "module",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "prebuild": "node scripts/verify-preview.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
